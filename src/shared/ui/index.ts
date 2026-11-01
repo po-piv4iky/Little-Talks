@@ -1,3 +1,5 @@
+export { Badge } from "./badge/Badge";
 export { Card } from "./card/Card";
-export { StyledText } from "./styled-text/StyledText";
 
+export { StyledIcon } from "./styled-icon/StyledIcon";
+export { StyledText } from "./styled-text/StyledText";

@@ -21,7 +21,7 @@ export function CustomTabBar({
       style={[
         styles.container,
         {
-          backgroundColor: colors.surface,
+          backgroundColor: colors.bottomPanelBg,
           borderColor: colors.border,
           paddingBottom: Math.max(insets.bottom, 8),
         },
