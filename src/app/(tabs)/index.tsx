@@ -1,9 +1,10 @@
-import { Text, View } from "react-native";
+import { PageLayout } from "@/widgets/page-layout";
+import { Text } from "react-native";
 
 export default function HomeScreen() {
   return (
-    <View>
+    <PageLayout title="Home">
       <Text>home</Text>
-    </View>
+    </PageLayout>
   );
 }

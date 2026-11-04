@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
+import { PageLayout } from "@/widgets/page-layout";
+import { StyleSheet, Text } from "react-native";
 
 export default function favorites() {
   return (
-    <View>
+    <PageLayout title="Favotites">
       <Text>favorites</Text>
-    </View>
+    </PageLayout>
   );
 }
 

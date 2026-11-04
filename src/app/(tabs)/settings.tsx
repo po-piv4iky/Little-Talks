@@ -1,12 +1,13 @@
+import { PageLayout } from "@/widgets/page-layout";
 import { LanguageSettings, ThemeSettings } from "@/widgets/settings";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet } from "react-native";
 
 export default function settings() {
   return (
-    <View style={{ paddingTop: 40 }}>
+    <PageLayout title="Settings">
       <ThemeSettings />
       <LanguageSettings />
-    </View>
+    </PageLayout>
   );
 }
 

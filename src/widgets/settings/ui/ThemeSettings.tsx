@@ -4,12 +4,6 @@ import { Badge, Card, StyledIcon, StyledText } from "@/shared/ui";
 import { StyleSheet, View } from "react-native";
 import { ThemeSelector } from "./ThemeSelector";
 
-const THEME_OPTIONS = [
-  { value: "light", label: "Light", icon: "sunny-outline" },
-  { value: "dark", label: "Dark", icon: "moon-outline" },
-  { value: "ocean", label: "Ocean", icon: "water-outline" },
-] as const;
-
 export function ThemeSettings() {
   const theme = useSettingsStore((state) => state.theme);
   const setTheme = useSettingsStore((state) => state.setThemeMode);
