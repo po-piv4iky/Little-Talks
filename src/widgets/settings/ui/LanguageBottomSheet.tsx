@@ -10,6 +10,7 @@ import {
 } from "@gorhom/bottom-sheet";
 
 import { forwardRef, useCallback, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 
 import { Pressable, StyleSheet, View } from "react-native";
 
@@ -43,6 +44,7 @@ export const LanguageBottomSheet = forwardRef<
   LanguageBottomSheetProps
 >(({ selectedLanguage, onSelect, onClose }, ref) => {
   const { colors } = useAppTheme();
+  const { t } = useTranslation("settings");
   const styles = createStyles(colors);
   const insets = useSafeAreaInsets();
 
@@ -87,14 +89,16 @@ export const LanguageBottomSheet = forwardRef<
         ]}
       >
         <View style={styles.header}>
-          <StyledText variant="headlineMd">Choose language</StyledText>
+          <StyledText variant="headlineMd">
+            {t("bottomSheetLanguage.title")}
+          </StyledText>
 
           <StyledText
             variant="bodySm"
             color="secondary"
             style={styles.subtitle}
           >
-            Select your preferred interface language
+            {t("bottomSheetLanguage.description")}
           </StyledText>
         </View>
 

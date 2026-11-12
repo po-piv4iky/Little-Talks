@@ -12,5 +12,9 @@
   },
   "labels": {
     "display": "Display"
+  },
+  "bottomSheetLanguage": {
+    "title": "Choose language",
+    "description": "Select your preferred interface language"
   }
 }

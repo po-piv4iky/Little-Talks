@@ -4,12 +4,14 @@ import { useRef } from "react";
 import { Card } from "@/shared/ui";
 
 import { useChangeLanguage } from "@/features/change-language";
+import { useTranslation } from "react-i18next";
 import { LanguageBottomSheet } from "./LanguageBottomSheet";
 import { LanguageSelector } from "./LanguageSelector";
 import { SettingsSectionHeader } from "./SettingsSectionHeader";
 
 export function LanguageSettings() {
   const { currentLanguage, changeLanguage } = useChangeLanguage();
+  const { t } = useTranslation("settings");
 
   const bottomSheetRef = useRef<BottomSheetModal>(null);
 
@@ -19,7 +21,7 @@ export function LanguageSettings() {
     <>
       <Card>
         <SettingsSectionHeader
-          title="Language & Region"
+          title={t("language.title")}
           icon="language-outline"
         />
 
