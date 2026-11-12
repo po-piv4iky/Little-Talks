@@ -20,11 +20,12 @@ export function AppProviders({ children }: PropsWithChildren) {
     </SafeAreaProvider>
   );
 }
-
 // SafeAreaProvider Предоставляет информацию о безопасных областях устройства
 
 // GestureHandlerRootView Корневой контейнер для жестов
 
 // ThemeProvider Предоставляет тему и цвета
+
+// LanguageSync востанавливаем язык из стора и из i18n
 
 // BottomSheetModalProvider Управляет модальными Bottom Sheet

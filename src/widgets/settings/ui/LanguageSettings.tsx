@@ -3,7 +3,7 @@ import { useRef } from "react";
 
 import { Card } from "@/shared/ui";
 
-import { useChangeLanguage } from "@/features/change-language/model/useChangeLanguage";
+import { useChangeLanguage } from "@/features/change-language";
 import { LanguageBottomSheet } from "./LanguageBottomSheet";
 import { LanguageSelector } from "./LanguageSelector";
 import { SettingsSectionHeader } from "./SettingsSectionHeader";

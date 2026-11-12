@@ -1,10 +1,12 @@
+import { StyledText } from "@/shared/ui";
 import { PageLayout } from "@/widgets/page-layout";
-import { Text } from "react-native";
+import { useTranslation } from "react-i18next";
 
 export default function HomeScreen() {
+  const { t } = useTranslation("navigation");
   return (
     <PageLayout title="Home">
-      <Text>home</Text>
+      <StyledText>{t("home")}</StyledText>
     </PageLayout>
   );
 }

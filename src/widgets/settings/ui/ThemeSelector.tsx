@@ -3,6 +3,7 @@ import { AppColors } from "@/shared/theme/types/theme.types";
 import { StyledIcon, StyledText } from "@/shared/ui";
 
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { LayoutChangeEvent, Pressable, StyleSheet, View } from "react-native";
 
 import Animated, {
@@ -12,9 +13,9 @@ import Animated, {
 } from "react-native-reanimated";
 
 export const THEME_OPTIONS = [
-  { value: "light", label: "Light", icon: "sunny-outline" },
-  { value: "dark", label: "Dark", icon: "moon-outline" },
-  { value: "ocean", label: "Ocean", icon: "water-outline" },
+  { value: "light", icon: "sunny-outline" },
+  { value: "dark", icon: "moon-outline" },
+  { value: "ocean", icon: "water-outline" },
 ] as const;
 
 export type ThemeOption = (typeof THEME_OPTIONS)[number]["value"];
@@ -27,6 +28,7 @@ interface ThemeSelectorProps {
 export function ThemeSelector({ selectedValue, onSelect }: ThemeSelectorProps) {
   const { colors } = useAppTheme();
   const styles = createStyles(colors);
+  const { t } = useTranslation("settings");
 
   const [containerWidth, setContainerWidth] = useState(0);
 
@@ -92,7 +94,7 @@ export function ThemeSelector({ selectedValue, onSelect }: ThemeSelectorProps) {
               variant="labelSm"
               style={[styles.label, isSelected && styles.selectedLabel]}
             >
-              {option.label}
+              {t(`theme.${option.value}`)}
             </StyledText>
           </Pressable>
         );

@@ -22,7 +22,7 @@ interface TabItemProps {
 }
 
 export function TabItem({ tab, focused, onPress, onLongPress }: TabItemProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation("navigation");
   const { colors } = useAppTheme();
 
   const scale = useSharedValue(1);

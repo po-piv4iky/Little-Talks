@@ -1,0 +1,16 @@
+{
+  "language": {
+    "title": "Language & Region",
+    "russian": "Russian",
+    "english": "English"
+  },
+  "theme": {
+    "title": "Appearance",
+    "light": "Light",
+    "dark": "Dark",
+    "ocean": "Ocean"
+  },
+  "labels": {
+    "display": "Display"
+  }
+}

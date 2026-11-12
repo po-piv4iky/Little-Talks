@@ -1,4 +1,3 @@
-import { getLocales } from "expo-localization";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
@@ -9,8 +8,6 @@ import enSettings from "../locales/en/settings.json";
 import ruCommon from "../locales/ru/common.json";
 import ruNavigation from "../locales/ru/navigation.json";
 import ruSettings from "../locales/ru/settings.json";
-
-const deviceLanguage = getLocales()[0]?.languageCode;
 
 const resources = {
   en: {
@@ -25,10 +22,11 @@ const resources = {
   },
 };
 
-i18n.use(initReactI18next).init({
+export const i18nReady = i18n.use(initReactI18next).init({
   resources,
-  lng: deviceLanguage === "ru" ? "ru" : "en",
+  lng: "ru",
   fallbackLng: "ru",
+  supportedLngs: ["ru", "en"],
   defaultNS: "common",
   ns: ["common", "navigation", "settings"],
   interpolation: {
