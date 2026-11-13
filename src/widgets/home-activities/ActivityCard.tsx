@@ -1,8 +1,7 @@
-
 import { Pressable, StyleSheet, View } from "react-native";
 
-import { StyledIcon, StyledText } from "@/shared/ui";
 import { AppColors, useAppTheme } from "@/shared/theme";
+import { StyledIcon, StyledText } from "@/shared/ui";
 
 interface ActivityCardProps {
   title: string;
@@ -25,25 +24,14 @@ export function ActivityCard({
   return (
     <Pressable
       onPress={onPress}
-      style={({ pressed }) => [
-        styles.container,
-        pressed && styles.pressed,
-      ]}
+      style={({ pressed }) => [styles.container, pressed && styles.pressed]}
     >
-      <View style={styles.imageContainer}>
-        {image}
-      </View>
+      <View style={styles.imageContainer}>{image}</View>
 
       <View style={styles.content}>
-        <StyledText variant="titleMd">
-          {title}
-        </StyledText>
+        <StyledText variant="titleMd">{title}</StyledText>
 
-        <StyledText
-          variant="bodySm"
-          color="secondary"
-          numberOfLines={2}
-        >
+        <StyledText variant="bodySm" color="secondary" numberOfLines={2}>
           {description}
         </StyledText>
 

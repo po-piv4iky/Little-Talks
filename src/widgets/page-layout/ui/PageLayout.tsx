@@ -6,7 +6,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 interface PageLayoutProps {
   children: ReactNode;
-  title: string;
+  title?: string;
   contentStyle?: StyleProp<ViewStyle>;
   contentGap?: number;
 }
@@ -23,7 +23,7 @@ export function PageLayout({
       edges={["left", "right", "top"]}
       style={[styles.container, { backgroundColor: colors.background }]}
     >
-      <AppHeader title={title} />
+      {title && <AppHeader title={title} />}
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={[

@@ -1,10 +1,12 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
+import enActivities from "../locales/en/activities.json";
 import enCommon from "../locales/en/common.json";
 import enNavigation from "../locales/en/navigation.json";
 import enSettings from "../locales/en/settings.json";
 
+import ruActivities from "../locales/ru/activities.json";
 import ruCommon from "../locales/ru/common.json";
 import ruNavigation from "../locales/ru/navigation.json";
 import ruSettings from "../locales/ru/settings.json";
@@ -14,11 +16,13 @@ const resources = {
     common: enCommon,
     navigation: enNavigation,
     settings: enSettings,
+    activities: enActivities,
   },
   ru: {
     common: ruCommon,
     navigation: ruNavigation,
     settings: ruSettings,
+    activities: ruActivities,
   },
 };
 
@@ -28,7 +32,7 @@ export const i18nReady = i18n.use(initReactI18next).init({
   fallbackLng: "ru",
   supportedLngs: ["ru", "en"],
   defaultNS: "common",
-  ns: ["common", "navigation", "settings"],
+  ns: ["common", "navigation", "settings", "activities"],
   interpolation: {
     escapeValue: false,
   },

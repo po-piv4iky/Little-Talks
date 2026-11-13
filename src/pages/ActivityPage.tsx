@@ -1,6 +1,8 @@
+import { StyledText } from "@/shared/ui";
+import { PageLayout } from "@/widgets/page-layout";
 import { Ionicons } from "@expo/vector-icons"; // Standard in Expo
 import { useRouter } from "expo-router";
-import { Pressable, StyleSheet, View } from "react-native";
+import { Pressable, StyleSheet } from "react-native";
 
 interface ActivityPageProps {
   activityId: string;
@@ -10,7 +12,8 @@ export function ActivityPage({ activityId }: ActivityPageProps) {
   const router = useRouter();
 
   return (
-    <View style={styles.container}>
+    <PageLayout>
+      <StyledText>{activityId}</StyledText>
       <Pressable
         style={({ pressed }) => [
           styles.backButton,
@@ -23,7 +26,7 @@ export function ActivityPage({ activityId }: ActivityPageProps) {
       >
         <Ionicons name="arrow-back" size={24} color="#000" />
       </Pressable>
-    </View>
+    </PageLayout>
   );
 }
 

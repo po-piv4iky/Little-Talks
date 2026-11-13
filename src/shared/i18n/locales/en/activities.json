@@ -1,0 +1,27 @@
+{
+  "sectionTitle": "Daily Activities",
+  "morning": {
+    "title": "Good Morning",
+    "description": "Wake up, stretch and start the day together"
+  },
+  "bath": {
+    "title": "Bath Time",
+    "description": "Enjoy a warm bath and gentle care"
+  },
+  "body": {
+    "title": "Body & Movement",
+    "description": "Explore movement with gentle exercises and massage"
+  },
+  "play": {
+    "title": "Play Time",
+    "description": "Discover new things through fun and playful activities"
+  },
+  "meal": {
+    "title": "Mealtime",
+    "description": "Enjoy a calm and happy feeding time"
+  },
+  "bedtime": {
+    "title": "Bedtime",
+    "description": "Slow down, relax and get ready for sleep"
+  }
+}
