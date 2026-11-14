@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { StyleSheet, View } from "react-native";
 
-import { Activity } from "@/entities/activity/model/activity.types";
+import { Activity } from "@/entities/activity";
 import { Card, StyledIcon, StyledText } from "@/shared/ui";
 
 interface ActivityCardProps {
