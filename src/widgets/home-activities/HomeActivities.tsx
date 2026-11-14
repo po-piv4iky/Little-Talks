@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { ACTIVITIES } from "@/entities/activity/config/activities";
 import { StyledText } from "@/shared/ui";
 import { useRouter } from "expo-router";
+import { FlatList, StyleSheet } from "react-native";
 import { ActivityCard } from "./ActivityCard";
 
 export function HomeActivities() {
@@ -11,16 +12,32 @@ export function HomeActivities() {
   return (
     <>
       <StyledText variant="headlineLg">{t("sectionTitle")}</StyledText>
-
-      {ACTIVITIES.map((activity) => (
-        <ActivityCard
-          key={activity.id}
-          title={t(activity.titleKey)}
-          description={t(activity.descriptionKey)}
-          duration={activity.duration}
-          onPress={() => router.push(`/activity/${activity.id}`)}
-        />
-      ))}
+      <FlatList
+        data={ACTIVITIES}
+        keyExtractor={(item) => item.id}
+        numColumns={2}
+        columnWrapperStyle={styles.row}
+        contentContainerStyle={styles.content}
+        scrollEnabled={false}
+        renderItem={({ item }) => (
+          <ActivityCard
+            activity={item}
+            onPress={() => router.push(`/activity/${item.id}`)}
+          />
+        )}
+      />
     </>
   );
 }
+const styles = StyleSheet.create({
+  content: {
+    paddingBottom: 24,
+    gap: 12,
+  },
+  row: {
+    gap: 12,
+  },
+  item: {
+    flex: 1,
+  },
+});

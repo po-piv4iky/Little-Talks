@@ -1,3 +1,6 @@
+import { Ionicons } from "@expo/vector-icons";
+import { ComponentProps } from "react";
+
 export type ActivityId =
   | "morning"
   | "bath"
@@ -8,8 +11,9 @@ export type ActivityId =
 
 export type Activity = {
   id: ActivityId;
-  titleKey: string;
-  descriptionKey: string;
+  title: string;
+  description: string;
   duration: number;
   image: string;
+  icon: ComponentProps<typeof Ionicons>["name"];
 };
